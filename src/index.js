@@ -28,7 +28,7 @@ ReactDom.render(
   <Provider store={store}>
     <BrowserRouter>
       <div>
-        <AuthRoute test="1"></AuthRoute>
+        <AuthRoute></AuthRoute>
         <Switch>
           <Route path="/bossinfo" component={BossInfo}></Route>
           <Route path="/geniusinfo" component={GeniusInfo}></Route>
