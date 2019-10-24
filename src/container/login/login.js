@@ -14,7 +14,9 @@ import JSFrom from "../../component/JS-form/JS-form.js";
 class Login extends React.Component {
   constructor(props) {
     super(props);
-    // debugger;
+    this.selfState = { selfTest: 22 };
+
+    debugger;
     this.register = this.register.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
   }
@@ -34,6 +36,8 @@ class Login extends React.Component {
         <Logo></Logo>
         {console.log(this.props.name)}
         {this.props.name}
+        {this.props.state.test}
+        {this.selfState.selfTest}
         <WingBlank>
           <List>
             {this.props.msg ? (

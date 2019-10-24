@@ -9,7 +9,7 @@ const initState = {
   redirectTo: "",
   msg: "",
   user: "",
-  type: ""
+  type: "11"
 };
 // reducer
 export function user(state = initState, action) {

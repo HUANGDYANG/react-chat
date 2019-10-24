@@ -4,6 +4,7 @@ export default function JSForm(Comp) {
   return class WrapperComp extends React.Component {
     constructor(props) {
       super(props);
+      // debugger;
       this.state = { test: 1 };
       this.handleChange = this.handleChange.bind(this);
       this.storeRef = this.storeRef.bind(this);
@@ -16,8 +17,8 @@ export default function JSForm(Comp) {
     }
     storeRef(ref) {
       // 拿到被包裹组件实例
-      console.log((this.ref = ref));
-      console.log(this.ref.register);
+      // console.log((this.ref = ref));
+      // console.log(this.ref.register);
     }
 
     render() {
