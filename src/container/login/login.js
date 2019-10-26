@@ -16,7 +16,6 @@ class Login extends React.Component {
     super(props);
     this.selfState = { selfTest: 22 };
 
-    debugger;
     this.register = this.register.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
   }

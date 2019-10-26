@@ -12,6 +12,12 @@ class User extends React.Component {
   constructor(props) {
     super(props);
     this.logout = this.logout.bind(this);
+    // this.toInfo = this.toInfo.bind(this);
+  }
+  toInfo() {
+    var type = this.props.type;
+    // debugger;
+    this.props.history.push(`${type}info`);
   }
   logout() {
     const alert = Modal.alert;
@@ -37,13 +43,15 @@ class User extends React.Component {
         <Result
           img={
             <img
-              src={require(`../img/${props.avatar}.png`)}
+              src={require(`../img/${props.avatar || "zebra"}.png`)}
               style={{ width: 50 }}
               alt=""
             />
           }
           title={props.user}
           message={props.type == "boss" ? props.company : null}
+          onButtonClick={() => this.toInfo()}
+          buttonText="个人信息"
         />
 
         <List renderHeader={() => "简介"}>

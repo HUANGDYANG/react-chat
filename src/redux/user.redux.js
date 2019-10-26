@@ -13,6 +13,7 @@ const initState = {
 };
 // reducer
 export function user(state = initState, action) {
+  // debugger;
   switch (action.type) {
     case AUTH_SUCCESS:
       return {
@@ -22,7 +23,7 @@ export function user(state = initState, action) {
         ...action.payload
       };
     case LOAD_DATA:
-      debugger;
+      // debugger;
       return { ...state, ...action.payload };
     case ERROR_MSG:
       return { ...state, isAuth: false, msg: action.msg };
@@ -35,7 +36,7 @@ export function user(state = initState, action) {
 
 function authSuccess(obj) {
   const { pwd, ...data } = obj;
-  debugger;
+  // debugger;
   return { type: AUTH_SUCCESS, payload: data };
 }
 
@@ -44,7 +45,7 @@ function errorMsg(msg) {
 }
 
 export function loadData(userinfo) {
-  debugger;
+  // debugger;
   return { type: LOAD_DATA, payload: userinfo };
 }
 export function logoutSubmit() {
